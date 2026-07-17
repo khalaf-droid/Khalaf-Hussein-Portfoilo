@@ -178,3 +178,39 @@
     }
   }
 }
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all $transition-base;
+  
+  &:hover {
+    background: rgba(128, 128, 128, 0.1);
+    transform: scale(1.1);
+  }
+}
+
+.mobile-theme-toggle {
+  font-size: $fs-body-lg;
+  width: auto;
+  padding: 0.5rem 1rem;
+  border-radius: $radius-full;
+  color: $text-primary;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(30px);
+  
+  .active & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

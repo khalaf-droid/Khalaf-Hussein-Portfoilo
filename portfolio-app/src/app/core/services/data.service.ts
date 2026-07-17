@@ -147,15 +147,6 @@ export class DataService {
   public get projects(): Project[] {
     return [
       {
-        title: 'To-Do-App-Nodejs',
-        description: 'A simple REST API for managing todos, built with Node.js, Express, and MongoDB. Features environment variables, cross-origin support, and input validation.',
-        imageIcon: '📝',
-        tags: ['Node.js', 'Express', 'MongoDB', 'Mongoose'],
-        links: [
-          { label: 'GitHub', url: 'https://github.com/khalaf-droid/To-Do-App-Nodejs' }
-        ]
-      },
-      {
         title: 'Aqario Luxe – Enterprise Real Estate Platform',
         description: 'Production-ready real estate platform with Node.js, Express 5, MongoDB, JWT authentication, Google OAuth, Email OTP, RBAC, Redis, Socket.IO, Cloudinary, Paymob, PayPal, and audit logging. Built 23+ data models and 20 API modules. Complete Admin & User Dashboards in Angular.',
         imageIcon: '🏠',
@@ -193,6 +184,15 @@ export class DataService {
         tags: ['Node.js', 'Express.js', 'MongoDB', 'Cloudinary', 'Clean Architecture'],
         links: [
           { label: 'Source Code', url: 'https://github.com/khalaf-droid/Youtube-Api' }
+        ]
+      },
+      {
+        title: 'To-Do-App-Nodejs',
+        description: 'A simple REST API for managing todos, built with Node.js, Express, and MongoDB. Features environment variables, cross-origin support, and input validation.',
+        imageIcon: '📝',
+        tags: ['Node.js', 'Express', 'MongoDB', 'Mongoose'],
+        links: [
+          { label: 'GitHub', url: 'https://github.com/khalaf-droid/To-Do-App-Nodejs' }
         ]
       }
     ];

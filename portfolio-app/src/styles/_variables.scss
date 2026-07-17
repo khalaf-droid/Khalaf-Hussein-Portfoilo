@@ -4,10 +4,10 @@
 // ═══════════════════════════════════════════════════════
 
 // ─── Colors ──────────────────────────────────────────
-$bg-primary: #fafafa;
-$bg-secondary: #ffffff;
-$bg-tertiary: #f3f4f6;
-$bg-card: rgba(255, 255, 255, 0.6);
+$bg-primary: var(--bg-primary);
+$bg-secondary: var(--bg-secondary);
+$bg-tertiary: var(--bg-tertiary);
+$bg-card: var(--bg-card);
 
 $accent-cyan: #0284c7;
 $accent-purple: #7e22ce;
@@ -16,11 +16,11 @@ $accent-blue: #2563eb;
 $accent-green: #059669;
 $accent-gold: #d97706;
 
-$text-primary: #111827;
-$text-secondary: rgba(17, 24, 39, 0.65);
-$text-tertiary: rgba(17, 24, 39, 0.4);
+$text-primary: var(--text-primary);
+$text-secondary: var(--text-secondary);
+$text-tertiary: var(--text-tertiary);
 
-$border-subtle: rgba(0, 0, 0, 0.08);
+$border-subtle: var(--border-subtle);
 $border-hover: rgba(2, 132, 199, 0.3);
 
 // ─── Gradients ───────────────────────────────────────
@@ -77,19 +77,19 @@ $radius-2xl: 32px;
 $radius-full: 9999px;
 
 // ─── Shadows ─────────────────────────────────────────
-$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-$shadow-md: 0 8px 32px rgba(0, 0, 0, 0.08);
-$shadow-lg: 0 16px 64px rgba(0, 0, 0, 0.12);
+$shadow-sm: var(--shadow-sm);
+$shadow-md: var(--shadow-md);
+$shadow-lg: var(--shadow-lg);
 $shadow-glow-cyan: 0 0 40px rgba($accent-cyan, 0.15);
 $shadow-glow-purple: 0 0 40px rgba($accent-purple, 0.15);
 $shadow-glow-strong: 0 0 80px rgba($accent-cyan, 0.25);
 
 // ─── Glass ───────────────────────────────────────────
-$glass-bg: rgba(255, 255, 255, 0.6);
-$glass-bg-hover: rgba(255, 255, 255, 0.8);
+$glass-bg: var(--glass-bg);
+$glass-bg-hover: var(--glass-bg-hover);
 $glass-blur: blur(20px);
 $glass-blur-strong: blur(40px);
-$glass-border: 1px solid $border-subtle;
+$glass-border: 1px solid var(--border-subtle);
 
 // ─── Transitions ─────────────────────────────────────
 $transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);

@@ -33,9 +33,8 @@ import { CursorService } from '../../core/services/cursor.service';
                (mouseenter)="setCursorText('View')" (mouseleave)="clearCursor()">
               View My Work
             </a>
-            <a href="#contact" class="btn btn-secondary" appMagnetic [magneticStrength]="0.4"
-               (mouseenter)="setCursorText('Contact')" (mouseleave)="clearCursor()">
-              Get In Touch
+            <a href="https://drive.google.com/file/d/1yXWvyozjeLhbOiFm6iAvkG9mJ8kyJQQV/view?usp=sharing" target="_blank" class="btn btn-secondary" appMagnetic [magneticStrength]="0.3">
+              Download my CV
             </a>
           </div>
 
