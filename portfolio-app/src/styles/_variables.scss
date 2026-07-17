@@ -1,0 +1,107 @@
+// ═══════════════════════════════════════════════════════
+// DESIGN SYSTEM — Variables
+// Premium dark theme with aurora accents
+// ═══════════════════════════════════════════════════════
+
+// ─── Colors ──────────────────────────────────────────
+$bg-primary: #050510;
+$bg-secondary: #0a0a1a;
+$bg-tertiary: #10102a;
+$bg-card: rgba(15, 15, 35, 0.6);
+
+$accent-cyan: #00d4ff;
+$accent-purple: #a855f7;
+$accent-pink: #ec4899;
+$accent-blue: #3b82f6;
+$accent-green: #10b981;
+$accent-gold: #f59e0b;
+
+$text-primary: #f0f0f5;
+$text-secondary: rgba(240, 240, 245, 0.6);
+$text-tertiary: rgba(240, 240, 245, 0.35);
+
+$border-subtle: rgba(255, 255, 255, 0.06);
+$border-hover: rgba(0, 212, 255, 0.3);
+
+// ─── Gradients ───────────────────────────────────────
+$gradient-accent: linear-gradient(135deg, $accent-cyan, $accent-purple);
+$gradient-accent-reverse: linear-gradient(135deg, $accent-purple, $accent-pink);
+$gradient-hero: linear-gradient(180deg, $bg-primary 0%, $bg-secondary 50%, $bg-primary 100%);
+$gradient-glow-cyan: radial-gradient(circle, rgba($accent-cyan, 0.15) 0%, transparent 70%);
+$gradient-glow-purple: radial-gradient(circle, rgba($accent-purple, 0.15) 0%, transparent 70%);
+$gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+
+// ─── Typography ──────────────────────────────────────
+$font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+$fs-display: clamp(3.5rem, 8vw, 7rem);
+$fs-h1: clamp(2.5rem, 5vw, 4.5rem);
+$fs-h2: clamp(2rem, 4vw, 3.5rem);
+$fs-h3: clamp(1.5rem, 2.5vw, 2rem);
+$fs-h4: 1.25rem;
+$fs-body: 1rem;
+$fs-body-lg: 1.125rem;
+$fs-small: 0.875rem;
+$fs-xs: 0.75rem;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-black: 900;
+
+$lh-tight: 1.1;
+$lh-snug: 1.3;
+$lh-normal: 1.6;
+$lh-relaxed: 1.8;
+
+$ls-tight: -0.03em;
+$ls-normal: 0;
+$ls-wide: 0.05em;
+$ls-wider: 0.1em;
+
+// ─── Spacing ─────────────────────────────────────────
+$section-padding-y: clamp(6rem, 12vh, 10rem);
+$section-padding-x: clamp(1.5rem, 5vw, 6rem);
+$container-max: 1200px;
+$container-wide: 1400px;
+
+// ─── Borders & Radius ────────────────────────────────
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+$radius-2xl: 32px;
+$radius-full: 9999px;
+
+// ─── Shadows ─────────────────────────────────────────
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+$shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+$shadow-lg: 0 16px 64px rgba(0, 0, 0, 0.5);
+$shadow-glow-cyan: 0 0 40px rgba($accent-cyan, 0.15);
+$shadow-glow-purple: 0 0 40px rgba($accent-purple, 0.15);
+$shadow-glow-strong: 0 0 80px rgba($accent-cyan, 0.25);
+
+// ─── Glass ───────────────────────────────────────────
+$glass-bg: rgba(15, 15, 35, 0.5);
+$glass-bg-hover: rgba(15, 15, 35, 0.7);
+$glass-blur: blur(20px);
+$glass-blur-strong: blur(40px);
+$glass-border: 1px solid $border-subtle;
+
+// ─── Transitions ─────────────────────────────────────
+$transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-spring: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+// ─── Z-index Scale ───────────────────────────────────
+$z-bg: -1;
+$z-base: 1;
+$z-card: 10;
+$z-nav: 100;
+$z-cursor: 500;
+$z-loading: 1000;
+$z-modal: 900;
