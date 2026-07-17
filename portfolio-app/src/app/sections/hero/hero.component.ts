@@ -51,7 +51,7 @@ import { CursorService } from '../../core/services/cursor.service';
           <div class="visual-glow"></div>
           <div class="image-wrapper" appTilt [tiltMax]="10" [tiltScale]="1.02">
             <!-- Ensure you have an image in public/images/ -->
-            <img src="images/Khalaf Hussein Professional.jpg" alt="{{ personalInfo.name }}" class="hero-image" />
+            <img src="images/profile.jpeg" alt="{{ personalInfo.name }}" class="hero-image" />
             <div class="image-overlay"></div>
           </div>
         </div>

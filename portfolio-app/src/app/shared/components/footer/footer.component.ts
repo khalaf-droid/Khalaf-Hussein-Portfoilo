@@ -16,7 +16,7 @@ import { MagneticDirective } from '../../../core/directives/magnetic.directive';
           
           <div class="footer-text">
             <p>&copy; 2026 Khalaf Hussein. All rights reserved.</p>
-            <p class="subtitle">Designed & Built with <span class="heart">❤</span> in Angular 20</p>
+            <p class="subtitle">Designed & Built with <span class="heart">❤</span> Khalaf</p>
           </div>
 
           <div class="footer-nav">

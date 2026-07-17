@@ -14,7 +14,7 @@ import * as THREE from 'three';
       height: 100vh;
       z-index: -10;
       pointer-events: none;
-      background: linear-gradient(180deg, #050510 0%, #0a0a1a 50%, #050510 100%);
+      background: transparent;
     }
   `]
 })
@@ -61,9 +61,9 @@ export class ParticleBgComponent implements OnInit, OnDestroy {
     const posArray = new Float32Array(particlesCount * 3);
     const colorsArray = new Float32Array(particlesCount * 3);
 
-    // Colors: Cyan (#00d4ff) and Purple (#a855f7)
-    const color1 = new THREE.Color(0x00d4ff);
-    const color2 = new THREE.Color(0xa855f7);
+    // Colors: Deep Blue and Purple
+    const color1 = new THREE.Color(0x0284c7);
+    const color2 = new THREE.Color(0x7e22ce);
 
     for (let i = 0; i < particlesCount * 3; i += 3) {
       // Position - spread particles across a wider volume
@@ -85,11 +85,11 @@ export class ParticleBgComponent implements OnInit, OnDestroy {
 
     // Custom shader material for soft glowing particles
     const material = new THREE.PointsMaterial({
-      size: 0.15,
+      size: 0.2,
       vertexColors: true,
       transparent: true,
-      opacity: 0.6,
-      blending: THREE.AdditiveBlending,
+      opacity: 0.8,
+      blending: THREE.NormalBlending,
       sizeAttenuation: true
     });
 
