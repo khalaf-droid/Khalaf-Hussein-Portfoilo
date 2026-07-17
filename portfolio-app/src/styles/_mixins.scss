@@ -1,0 +1,155 @@
+// ═══════════════════════════════════════════════════════
+// DESIGN SYSTEM — Mixins
+// Reusable style patterns
+// ═══════════════════════════════════════════════════════
+
+@use 'variables' as *;
+
+// ─── Glass Card ──────────────────────────────────────
+@mixin glass($blur: $glass-blur, $bg: $glass-bg) {
+  background: $bg;
+  backdrop-filter: $blur;
+  -webkit-backdrop-filter: $blur;
+  border: $glass-border;
+}
+
+@mixin glass-hover {
+  background: $glass-bg-hover;
+  border-color: $border-hover;
+  box-shadow: $shadow-glow-cyan;
+}
+
+// ─── Gradient Text ───────────────────────────────────
+@mixin gradient-text($gradient: $gradient-accent) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// ─── Responsive ──────────────────────────────────────
+@mixin mobile {
+  @media (max-width: 640px) { @content; }
+}
+@mixin tablet {
+  @media (max-width: 1024px) { @content; }
+}
+@mixin desktop {
+  @media (min-width: 1025px) { @content; }
+}
+@mixin wide {
+  @media (min-width: 1440px) { @content; }
+}
+
+// ─── Section Layout ──────────────────────────────────
+@mixin section {
+  position: relative;
+  padding: $section-padding-y $section-padding-x;
+  overflow: hidden;
+}
+
+@mixin container($max: $container-max) {
+  max-width: $max;
+  margin: 0 auto;
+  width: 100%;
+}
+
+// ─── Glow Effect ─────────────────────────────────────
+@mixin glow($color: $accent-cyan, $size: 200px) {
+  &::after {
+    content: '';
+    position: absolute;
+    width: $size;
+    height: $size;
+    background: radial-gradient(circle, rgba($color, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(40px);
+    @content;
+  }
+}
+
+// ─── Card Hover ──────────────────────────────────────
+@mixin card-hover {
+  transition: all $transition-base;
+  &:hover {
+    transform: translateY(-4px);
+    @include glass-hover;
+  }
+}
+
+// ─── Tag/Badge ───────────────────────────────────────
+@mixin tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  font-size: $fs-xs;
+  font-weight: $fw-medium;
+  color: $accent-cyan;
+  background: rgba($accent-cyan, 0.08);
+  border: 1px solid rgba($accent-cyan, 0.15);
+  border-radius: $radius-full;
+  letter-spacing: $ls-wide;
+  transition: all $transition-fast;
+
+  &:hover {
+    background: rgba($accent-cyan, 0.15);
+    border-color: rgba($accent-cyan, 0.3);
+  }
+}
+
+// ─── Noise Overlay ───────────────────────────────────
+@mixin noise-overlay {
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+  }
+}
+
+// ─── Truncate ────────────────────────────────────────
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// ─── Focus Ring ──────────────────────────────────────
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 2px solid $accent-cyan;
+    outline-offset: 3px;
+    border-radius: $radius-sm;
+  }
+}
+
+// ─── Scrollbar ───────────────────────────────────────
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba($accent-cyan, 0.2);
+    border-radius: 3px;
+    &:hover {
+      background: rgba($accent-cyan, 0.4);
+    }
+  }
+}

@@ -1,0 +1,180 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 0;
+  z-index: $z-nav;
+  transition: all $transition-base;
+  
+  &.scrolled {
+    padding: 1rem 0;
+    @include glass(20px, rgba(5, 5, 16, 0.8));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  text-decoration: none;
+  font-family: $font-heading;
+  font-weight: $fw-black;
+  font-size: $fs-h3;
+  color: $text-primary;
+  letter-spacing: $ls-tight;
+  
+  .logo-dot {
+    width: 6px;
+    height: 6px;
+    background-color: $accent-cyan;
+    border-radius: 50%;
+    margin-left: 2px;
+    box-shadow: 0 0 10px $accent-cyan;
+  }
+}
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.nav-link {
+  color: $text-secondary;
+  text-decoration: none;
+  font-size: $fs-small;
+  font-weight: $fw-semibold;
+  letter-spacing: $ls-wide;
+  text-transform: uppercase;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+.nav-btn {
+  padding: 0.75rem 2rem;
+  font-size: $fs-small;
+}
+
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  width: 30px;
+  height: 20px;
+  justify-content: center;
+  z-index: $z-nav + 10;
+  position: relative;
+
+  @include tablet {
+    display: flex;
+  }
+
+  span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $text-primary;
+    transition: all $transition-base;
+    border-radius: 2px;
+  }
+
+  &.active {
+    span:first-child {
+      transform: translateY(4px) rotate(45deg);
+    }
+    span:last-child {
+      transform: translateY(-4px) rotate(-45deg);
+    }
+  }
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(5, 5, 16, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: $z-nav + 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all $transition-slow;
+  
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+
+    .mobile-nav-link {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobile-nav-link {
+  font-size: $fs-h2;
+  font-weight: $fw-bold;
+  color: $text-primary;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all $transition-base;
+  
+  &:hover {
+    color: $accent-cyan;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $fs-body;
+  font-weight: $fw-semibold;
+  border-radius: $radius-full;
+  transition: all $transition-base;
+  text-decoration: none;
+
+  &.btn-primary {
+    background: $text-primary;
+    color: $bg-primary;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+      background: #ffffff;
+    }
+  }
+}

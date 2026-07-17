@@ -1,0 +1,83 @@
+// ═══════════════════════════════════════════════════════
+// DESIGN SYSTEM — Typography
+// ═══════════════════════════════════════════════════════
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+body {
+  font-family: $font-body;
+  font-size: $fs-body;
+  line-height: $lh-normal;
+  color: $text-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: $fw-bold;
+  line-height: $lh-tight;
+  margin: 0 0 1rem 0;
+  letter-spacing: $ls-tight;
+}
+
+h1 {
+  font-size: $fs-h1;
+  font-weight: $fw-black;
+}
+
+h2 {
+  font-size: $fs-h2;
+}
+
+h3 {
+  font-size: $fs-h3;
+}
+
+h4 {
+  font-size: $fs-h4;
+}
+
+p {
+  color: $text-secondary;
+  margin: 0 0 1.5rem 0;
+  max-width: 65ch; // Optimal reading width
+}
+
+a {
+  color: $accent-cyan;
+  text-decoration: none;
+  transition: all $transition-fast;
+  
+  &:hover {
+    color: $accent-purple;
+  }
+}
+
+code, pre, .mono {
+  font-family: $font-mono;
+  font-size: 0.9em;
+}
+
+.text-gradient {
+  @include gradient-text;
+}
+
+.text-gradient-reverse {
+  @include gradient-text($gradient-accent-reverse);
+}
+
+.subtitle {
+  font-size: $fs-body-lg;
+  color: $text-secondary;
+  line-height: $lh-relaxed;
+}
+
+.label {
+  font-size: $fs-small;
+  font-weight: $fw-semibold;
+  text-transform: uppercase;
+  letter-spacing: $ls-wider;
+  color: $text-tertiary;
+}

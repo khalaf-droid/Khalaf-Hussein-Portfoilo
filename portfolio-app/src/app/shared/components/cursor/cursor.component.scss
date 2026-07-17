@@ -1,0 +1,67 @@
+@use '../../../../styles/variables' as *;
+
+:host {
+  display: block;
+  pointer-events: none;
+  z-index: $z-cursor;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.cursor-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: $accent-cyan;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: $z-cursor + 1;
+  will-change: transform;
+}
+
+.cursor-follower {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: $z-cursor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform, background-color, border-color;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  &.text {
+    .cursor-text {
+      opacity: 1;
+    }
+  }
+}
+
+.cursor-text {
+  font-family: $font-heading;
+  font-size: 5px;
+  font-weight: 700;
+  color: $bg-primary;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  :host {
+    display: none; // Disable custom cursor on touch devices
+  }
+}
