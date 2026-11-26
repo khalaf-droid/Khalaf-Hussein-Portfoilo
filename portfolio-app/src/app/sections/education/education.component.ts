@@ -1,3 +1,4 @@
+import { IconComponent } from '../../shared/components/icon/icon.component';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataService, Education } from '../../core/services/data.service';
@@ -7,7 +8,7 @@ import { TiltDirective } from '../../core/directives/tilt.directive';
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [CommonModule, RevealDirective, TiltDirective],
+  imports: [IconComponent, CommonModule, RevealDirective, TiltDirective],
   template: `
     <section id="education" class="section">
       <div class="container">
@@ -20,7 +21,7 @@ import { TiltDirective } from '../../core/directives/tilt.directive';
         <div class="education-grid" appReveal="stagger" staggerSelector=".education-card">
           <div class="education-card glass-card" *ngFor="let edu of education" appTilt [tiltMax]="8">
             <div class="card-icon-wrapper">
-              <span class="card-icon">🎓</span>
+              <span class="card-icon"><app-icon name="graduation"></app-icon></span>
               <div class="icon-glow"></div>
             </div>
 
