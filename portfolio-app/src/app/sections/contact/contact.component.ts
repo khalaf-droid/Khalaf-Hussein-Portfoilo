@@ -170,7 +170,6 @@ export class ContactComponent implements OnInit {
             from_email: v.email!.trim(),
             reply_to: v.email!.trim(),
             message: v.message!.trim(),
-            to_email: this.personalInfo.email,
           },
         }),
       });
