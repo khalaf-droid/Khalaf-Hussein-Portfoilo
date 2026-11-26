@@ -198,3 +198,40 @@
     }
   }
 }
+
+.form-group {
+  &.invalid {
+    input, textarea {
+      border-color: #ff6b6b;
+    }
+  }
+}
+
+.field-error {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: #ff8a8a;
+}
+
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+
+  &.success { color: #5eead4; }
+  &.error { color: #ff8a8a; }
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
