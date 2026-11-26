@@ -1,3 +1,4 @@
+import { IconComponent } from '../icon/icon.component';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MagneticDirective } from '../../../core/directives/magnetic.directive';
@@ -5,7 +6,7 @@ import { MagneticDirective } from '../../../core/directives/magnetic.directive';
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, MagneticDirective],
+  imports: [IconComponent, CommonModule, MagneticDirective],
   template: `
     <footer class="footer">
       <div class="container-wide">
@@ -16,7 +17,7 @@ import { MagneticDirective } from '../../../core/directives/magnetic.directive';
           
           <div class="footer-text">
             <p>&copy; 2026 Khalaf Hussein. All rights reserved.</p>
-            <p class="subtitle">Designed & Built with <span class="heart">❤</span> in Angular 20</p>
+            <p class="subtitle">Designed & Built with <span class="heart"><app-icon name="heart"></app-icon></span> in Angular 20</p>
           </div>
 
           <div class="footer-nav">

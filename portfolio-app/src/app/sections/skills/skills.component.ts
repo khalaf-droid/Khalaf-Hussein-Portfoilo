@@ -1,3 +1,4 @@
+import { IconComponent } from '../../shared/components/icon/icon.component';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataService, SkillCategory } from '../../core/services/data.service';
@@ -7,7 +8,7 @@ import { TiltDirective } from '../../core/directives/tilt.directive';
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, RevealDirective, TiltDirective],
+  imports: [IconComponent, CommonModule, RevealDirective, TiltDirective],
   template: `
     <section id="skills" class="section">
       <div class="container-wide">
@@ -20,7 +21,7 @@ import { TiltDirective } from '../../core/directives/tilt.directive';
         <div class="skills-grid" appReveal="stagger" staggerSelector=".skill-card">
           <div class="skill-card glass-card" *ngFor="let category of skillCategories" appTilt [tiltMax]="5">
             <div class="card-header">
-              <span class="category-icon">{{ category.icon }}</span>
+              <span class="category-icon"><app-icon [name]="category.icon"></app-icon></span>
               <h3 class="category-title">{{ category.title }}</h3>
             </div>
             

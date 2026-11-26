@@ -55,7 +55,7 @@ export class DataService {
       },
       stats: [
         { number: '4+', label: 'Internships' },
-        { number: '6+', label: 'Projects' },
+        { number: '9+', label: 'Projects' },
         { number: '15+', label: 'Technologies' }
       ]
     };
@@ -149,7 +149,7 @@ export class DataService {
       {
         title: 'Aqario Luxe – Enterprise Real Estate Platform',
         description: 'Production-ready real estate platform with Node.js, Express 5, MongoDB, JWT authentication, Google OAuth, Email OTP, RBAC, Redis, Socket.IO, Cloudinary, Paymob, PayPal, and audit logging. Built 23+ data models and 20 API modules. Complete Admin & User Dashboards in Angular.',
-        imageIcon: '🏠',
+        imageIcon: 'home',
         tags: ['Angular', 'Node.js', 'Express 5', 'MongoDB', 'Redis', 'Socket.IO', 'JWT', 'RBAC'],
         links: [
           { label: 'Live Demo', url: 'https://aqario-luxe.vercel.app/' },
@@ -160,7 +160,7 @@ export class DataService {
       {
         title: 'Nexus – YouTube Clone Platform',
         description: 'Scalable YouTube-inspired platform built from scratch with MEAN Stack. Features Creator Studio, Analytics Dashboard, Role-Based Admin Panel, Google Auth, Email OTP, JWT, Cloudinary Media Pipeline, Playlists, Watch History, Comments, Likes, Subscriptions, Notifications, and Search. Built with Angular 20, Signals, Tailwind CSS, and Angular Material.',
-        imageIcon: '🎬',
+        imageIcon: 'film',
         tags: ['Angular 20', 'Node.js', 'Express.js', 'MongoDB', 'Cloudinary', 'Tailwind CSS', 'JWT'],
         links: [
           { label: 'Live Demo', url: 'https://khalaf-droid.github.io/Nexus-Youtube-Clone/' },
@@ -171,7 +171,7 @@ export class DataService {
       {
         title: 'Quran Streaming Platform',
         description: 'A production-hardened Quran audio streaming platform built on the MEAN Stack with security as a core requirement — strict validation, rate-limiting, atomic DB operations, and a persistent audio player experience with custom Islamic-inspired design system.',
-        imageIcon: '🕌',
+        imageIcon: 'landmark',
         tags: ['Angular 19', 'Express.js', 'MongoDB', 'Security', 'Rate Limiting'],
         links: [
           { label: 'Source Code', url: 'https://github.com/khalaf-droid/quran-streaming-platform-mean' }
@@ -180,10 +180,55 @@ export class DataService {
       {
         title: 'YouTube API Backend',
         description: 'A scalable backend simulating YouTube\'s architecture using Node.js, Express.js, MongoDB, and Cloudinary, with Clean Architecture and REST APIs. Features secure authentication system with JWT, role-based access control, and comprehensive video management APIs.',
-        imageIcon: '📡',
+        imageIcon: 'server',
         tags: ['Node.js', 'Express.js', 'MongoDB', 'Cloudinary', 'Clean Architecture'],
         links: [
           { label: 'Source Code', url: 'https://github.com/khalaf-droid/Youtube-Api' }
+        ]
+      },
+      {
+        title: 'PS-Cafe – PlayStation Cafe & POS System',
+        description: 'Offline-first desktop application for PlayStation gaming centers and cafeterias. Live gaming session tracking with time/rate tariffs, POS sales for snacks and drinks, shift reconciliation, expense tracking, thermal receipt printing, cash drawer support, and automatic backups. Built with Angular, Electron, Express 5, Prisma, and SQLite (WAL mode).',
+        imageIcon: 'gamepad',
+        tags: ['Angular', 'Electron', 'Express 5', 'Prisma', 'SQLite', 'TypeScript'],
+        links: [
+          { label: 'Source Code', url: 'https://github.com/khalaf-droid/POS-System' }
+        ]
+      },
+      {
+        title: 'PostpartumRAG – Evidence-Grounded Support Chatbot',
+        description: 'Retrieval-Augmented Generation app for postpartum mental-health questions. Retrieves evidence from a trusted knowledge base with semantic vector search, generates answers with Gemini, and returns source citations. Angular frontend, Node.js/Express API gateway with JWT auth and rate limiting, and a FastAPI RAG engine behind a zero-trust boundary.',
+        imageIcon: 'brain',
+        tags: ['RAG', 'Gemini', 'Angular', 'Express', 'FastAPI', 'JWT', 'Vector Search'],
+        links: [
+          { label: 'Source Code', url: 'https://github.com/khalaf-droid/PostpartumRAG' }
+        ]
+      },
+      {
+        title: 'Task Tracker API',
+        description: 'Production-ready REST API for managing tasks and data-flow alerts. Built with Express 5, TypeScript (strict), Mongoose 9, and Zod validation with XSS sanitization. Includes Helmet, CORS, rate limiting, Swagger/OpenAPI docs, and Vitest unit and integration tests.',
+        imageIcon: 'check',
+        tags: ['Express 5', 'TypeScript', 'MongoDB', 'Zod', 'Swagger', 'Vitest'],
+        links: [
+          { label: 'Source Code', url: 'https://github.com/khalaf-droid/Task-Tracker-API' }
+        ]
+      },
+      {
+        title: 'Al-Zaeem Restaurant Website',
+        description: 'Arabic (RTL) website for a restaurant in Tahta with menu, table booking and delivery information, SEO structured data, and server-side rendering. Built with Angular 22 SSR, Express, and a hardened server setup.',
+        imageIcon: 'utensils',
+        tags: ['Angular 22', 'SSR', 'Express', 'SEO', 'RTL'],
+        links: [
+          { label: 'Source Code', url: 'https://github.com/khalaf-droid/al-zaeem-tahta' }
+        ]
+      },
+      {
+        title: 'Moussa Library Website',
+        description: 'Arabic (RTL) website for a local library and stationery shop: study summaries for every grade, printing services, and school supplies, with a responsive design.',
+        imageIcon: 'book',
+        tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'RTL'],
+        links: [
+          { label: 'Source Code', url: 'https://github.com/khalaf-droid/moussa-library' }
         ]
       }
     ];
@@ -193,32 +238,32 @@ export class DataService {
     return [
       {
         title: 'Backend Development',
-        icon: '⚙️',
+        icon: 'settings',
         skills: ['Node.js', 'Express.js', 'REST APIs', 'JWT Authentication', 'Mongoose', 'Laravel (PHP)', 'API Design']
       },
       {
         title: 'Frontend Development',
-        icon: '🎨',
+        icon: 'palette',
         skills: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Angular', 'Angular Material', 'Tailwind CSS', 'Responsive Design']
       },
       {
         title: 'Database Management',
-        icon: '🗄️',
+        icon: 'database',
         skills: ['MongoDB', 'Mongoose ODM', 'MySQL', 'Database Design', 'Query Optimization', 'Indexing']
       },
       {
         title: 'AI & Emerging Technologies',
-        icon: '🤖',
+        icon: 'bot',
         skills: ['LLM Applications', 'LangChain', 'Prompt Engineering', 'RAG Workflows', 'AI Agents', 'Pydantic', 'AI Tools Integration']
       },
       {
         title: 'Networking & Security',
-        icon: '🔐',
+        icon: 'shield',
         skills: ['CCNA', 'Network Support', 'Cybersecurity', 'Cloud Security (SC-900)', 'Zero Trust', 'Azure AD']
       },
       {
         title: 'Tools & Technologies',
-        icon: '🛠️',
+        icon: 'wrench',
         skills: ['Git & GitHub', 'VS Code', 'Postman', 'npm', 'Linux', 'Docker (Learning)']
       }
     ];

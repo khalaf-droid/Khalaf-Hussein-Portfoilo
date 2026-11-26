@@ -1,3 +1,4 @@
+import { IconComponent } from '../../shared/components/icon/icon.component';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataService, Project } from '../../core/services/data.service';
@@ -9,7 +10,7 @@ import { CursorService } from '../../core/services/cursor.service';
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, RevealDirective, TiltDirective, MagneticDirective],
+  imports: [IconComponent, CommonModule, RevealDirective, TiltDirective, MagneticDirective],
   template: `
     <section id="projects" class="section">
       <div class="container-wide">
@@ -24,7 +25,7 @@ import { CursorService } from '../../core/services/cursor.service';
             <div class="card-inner glass-card">
               
               <div class="project-visual">
-                <div class="project-icon">{{ project.imageIcon }}</div>
+                <div class="project-icon"><app-icon [name]="project.imageIcon"></app-icon></div>
                 <div class="visual-bg"></div>
               </div>
 

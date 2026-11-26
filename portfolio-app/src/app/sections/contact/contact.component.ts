@@ -1,3 +1,4 @@
+import { IconComponent } from '../../shared/components/icon/icon.component';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataService } from '../../core/services/data.service';
@@ -7,7 +8,7 @@ import { MagneticDirective } from '../../core/directives/magnetic.directive';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, RevealDirective, MagneticDirective],
+  imports: [IconComponent, CommonModule, RevealDirective, MagneticDirective],
   template: `
     <section id="contact" class="section">
       <div class="container">
@@ -24,7 +25,7 @@ import { MagneticDirective } from '../../core/directives/magnetic.directive';
 
             <div class="info-items">
               <div class="info-item">
-                <span class="info-icon">📧</span>
+                <span class="info-icon"><app-icon name="mail"></app-icon></span>
                 <div class="info-text">
                   <span class="info-label">Email</span>
                   <a href="mailto:{{ personalInfo.email }}" class="info-value" appMagnetic [magneticStrength]="0.2">{{ personalInfo.email }}</a>
@@ -32,7 +33,7 @@ import { MagneticDirective } from '../../core/directives/magnetic.directive';
               </div>
 
               <div class="info-item">
-                <span class="info-icon">📱</span>
+                <span class="info-icon"><app-icon name="phone"></app-icon></span>
                 <div class="info-text">
                   <span class="info-label">Phone</span>
                   <a href="tel:{{ personalInfo.phone }}" class="info-value" appMagnetic [magneticStrength]="0.2">{{ personalInfo.phone }}</a>
@@ -40,7 +41,7 @@ import { MagneticDirective } from '../../core/directives/magnetic.directive';
               </div>
 
               <div class="info-item">
-                <span class="info-icon">📍</span>
+                <span class="info-icon"><app-icon name="pin"></app-icon></span>
                 <div class="info-text">
                   <span class="info-label">Location</span>
                   <span class="info-value">{{ personalInfo.location }}</span>
