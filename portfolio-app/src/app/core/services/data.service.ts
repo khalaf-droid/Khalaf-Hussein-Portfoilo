@@ -55,7 +55,7 @@ export class DataService {
       },
       stats: [
         { number: '4+', label: 'Internships' },
-        { number: '6+', label: 'Projects' },
+        { number: '10+', label: 'Projects' },
         { number: '15+', label: 'Technologies' }
       ]
     };
@@ -184,6 +184,61 @@ export class DataService {
         tags: ['Node.js', 'Express.js', 'MongoDB', 'Cloudinary', 'Clean Architecture'],
         links: [
           { label: 'Source Code', url: 'https://github.com/khalaf-droid/Youtube-Api' }
+        ]
+      },
+      {
+        title: 'PS-Cafe – PlayStation Cafe & POS System',
+        description: 'Offline-first desktop application for PlayStation gaming centers and cafeterias. Live gaming session tracking with time/rate tariffs, POS sales for snacks and drinks, shift reconciliation, expense tracking, thermal receipt printing, cash drawer support, and automatic backups. Built with Angular, Electron, Express 5, Prisma, and SQLite (WAL mode).',
+        imageIcon: '🎮',
+        tags: ['Angular', 'Electron', 'Express 5', 'Prisma', 'SQLite', 'TypeScript'],
+        links: [
+          { label: 'Source Code', url: 'https://github.com/khalaf-droid/POS-System' }
+        ]
+      },
+      {
+        title: 'PostpartumRAG – Evidence-Grounded Support Chatbot',
+        description: 'Retrieval-Augmented Generation app for postpartum mental-health questions. Retrieves evidence from a trusted knowledge base with semantic vector search, generates answers with Gemini, and returns source citations. Angular frontend, Node.js/Express API gateway with JWT auth and rate limiting, and a FastAPI RAG engine behind a zero-trust boundary.',
+        imageIcon: '🧠',
+        tags: ['RAG', 'Gemini', 'Angular', 'Express', 'FastAPI', 'JWT', 'Vector Search'],
+        links: [
+          { label: 'Source Code', url: 'https://github.com/khalaf-droid/PostpartumRAG' }
+        ]
+      },
+      {
+        title: 'Task Tracker API',
+        description: 'Production-ready REST API for managing tasks and data-flow alerts. Built with Express 5, TypeScript (strict), Mongoose 9, and Zod validation with XSS sanitization. Includes Helmet, CORS, rate limiting, Swagger/OpenAPI docs, and Vitest unit and integration tests.',
+        imageIcon: '✅',
+        tags: ['Express 5', 'TypeScript', 'MongoDB', 'Zod', 'Swagger', 'Vitest'],
+        links: [
+          { label: 'Source Code', url: 'https://github.com/khalaf-droid/Task-Tracker-API' }
+        ]
+      },
+      {
+        title: 'Al-Zaeem Restaurant Website',
+        description: 'Arabic (RTL) website for a restaurant in Tahta with menu, table booking and delivery information, SEO structured data, and server-side rendering. Built with Angular 22 SSR, Express, and a hardened server setup.',
+        imageIcon: '🍖',
+        tags: ['Angular 22', 'SSR', 'Express', 'SEO', 'RTL'],
+        links: [
+          { label: 'Source Code', url: 'https://github.com/khalaf-droid/al-zaeem-tahta' }
+        ]
+      },
+      {
+        title: 'Moussa Library Website',
+        description: 'Arabic (RTL) website for a local library and stationery shop: study summaries for every grade, printing services, and school supplies, with a responsive design.',
+        imageIcon: '📚',
+        tags: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'RTL'],
+        links: [
+          { label: 'Source Code', url: 'https://github.com/khalaf-droid/moussa-library' }
+        ]
+      },
+      {
+        title: 'Khalaf Academy',
+        description: 'Full-stack learning platform built with an Angular frontend and a TypeScript backend.',
+        imageIcon: '🎓',
+        tags: ['Angular', 'TypeScript', 'Node.js'],
+        links: [
+          { label: 'Frontend', url: 'https://github.com/khalaf-droid/Khalaf-Academy-Frontend' },
+          { label: 'Backend', url: 'https://github.com/khalaf-droid/Khalaf-Academy-Backend' }
         ]
       }
     ];
